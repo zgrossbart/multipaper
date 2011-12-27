@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+        <title>Paper.js in multiple canvas tags</title> 
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="paper.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script type="text/paperscript" canvas="canvas1" src="drawing1.pjs" id="script"></script>
+        <script type="text/paperscript" canvas="canvas2" src="drawing2.pjs" id="script"></script>
+    </head> 
+    <body>
+        
+        <div id="container">
+            <h1>Paper.js multi-canvas issue</h1>
+            
+            <canvas id="canvas1" width=300 height=300></canvas>
+            <canvas id="canvas2" width=300 height=300></canvas>
+            
+        </div>
+    </body>
+</html>

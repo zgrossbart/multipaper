@@ -1,0 +1,22 @@
+
+var path;
+
+function doLayout() {
+    if (path) {
+        path.remove();
+    }
+    var point = new Point(100, 100);
+    var size = new Size(100, 100);
+    var rectangle = new Rectangle(point, size);
+    var cornerSize = new Size(30, 30);
+    path = new Path.RoundRectangle(rectangle, cornerSize);
+    
+    path.fillColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    
+    var text = new PointText(new Point(150, 90));
+    text.justification = 'center';
+    text.fillColor = 'black';
+    text.content = 'This is canvas 1';
+}
+
+doLayout();
