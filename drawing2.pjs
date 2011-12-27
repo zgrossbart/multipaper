@@ -17,6 +17,16 @@ function doLayout() {
     text.justification = 'center';
     text.fillColor = 'black';
     text.content = 'This is canvas 2';
+    
+    paper.view.draw();
 }
 
-doLayout();
+loader.drawing2 = {};
+
+loader.drawing2.layout = function() {
+    doLayout();
+};
+
+$(window).resize(function() {
+    doLayout();
+});

@@ -5,7 +5,7 @@ function doLayout() {
     if (path) {
         path.remove();
     }
-    var point = new Point(100, 100);
+    var point = new Point(80, 80);
     var size = new Size(100, 100);
     var rectangle = new Rectangle(point, size);
     var cornerSize = new Size(30, 30);
@@ -13,10 +13,21 @@ function doLayout() {
     
     path.fillColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
     
-    var text = new PointText(new Point(150, 90));
+    var text = new PointText(new Point(130, 65));
     text.justification = 'center';
     text.fillColor = 'black';
     text.content = 'This is canvas 1';
+    
+    paper.view.draw();
 }
 
-doLayout();
+loader.drawing1 = {};
+
+loader.drawing1.layout = function() {
+    doLayout();
+    
+};
+
+$(window).resize(function() {
+    doLayout();
+});

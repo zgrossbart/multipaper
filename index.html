@@ -7,16 +7,23 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="paper.js" type="text/javascript" charset="utf-8"></script>
         
-        <script type="text/paperscript" canvas="canvas1" src="drawing1.pjs" id="script"></script>
-        <script type="text/paperscript" canvas="canvas2" src="drawing2.pjs" id="script"></script>
+        <script src="loader.js" type="text/javascript" charset="utf-8"></script>
     </head> 
     <body>
         
         <div id="container">
             <h1>Paper.js multi-canvas issue</h1>
             
+            <p>
+                This sample shows a test case of loading multiple canvas tags into the same page.  Just resize the page and note that the contents from canvas 1 will appear in canvas 1 (on the left) and in canvas 2 (on the right).  The contents of canvas 1 will also stop getting updated.
+            </p>
+            
             <canvas id="canvas1" width=300 height=300></canvas>
             <canvas id="canvas2" width=300 height=300></canvas>
+            
+            <p>
+                View the source code at <a href="https://github.com/zgrossbart/multipaper">https://github.com/zgrossbart/multipaper</a>.
+            </p>
             
         </div>
     </body>
