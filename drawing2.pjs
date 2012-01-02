@@ -1,9 +1,11 @@
 
 var path;
+var text;
 
 function doLayout() {
     if (path) {
         path.remove();
+        text.remove();
     }
     var point = new Point(100, 100);
     var size = new Size(100, 100);
@@ -13,7 +15,7 @@ function doLayout() {
     
     path.fillColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
     
-    var text = new PointText(new Point(150, 90));
+    text = new PointText(new Point(150, 90));
     text.justification = 'center';
     text.fillColor = 'black';
     text.content = 'This is canvas 2';
@@ -28,5 +30,6 @@ loader.drawing2.layout = function() {
 };
 
 $(window).resize(function() {
+    paper = view._scope;
     doLayout();
 });

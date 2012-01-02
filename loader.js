@@ -6,6 +6,7 @@ function loadDrawing(/*string*/ url, /*string*/ id) {
         url: url + '.pjs',
         dataType: 'html',
         success: function(data) {
+            paper = new paper.PaperScope();
             paper.setup(document.getElementById(id));
             paper.evaluate(data);
             
